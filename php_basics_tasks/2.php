@@ -1,5 +1,6 @@
 <?php
-echo "<br><div align = center><b>php_basics_tasks:</b> Завдання №2 </div><br>";
+# php_basics_tasks: Завдання №2
+#
+# Створіть зміну age і присвойте їй значення яке містить ваш вік.
 
 $age = 20;
-echo "\$age = " . $age;

@@ -1,7 +1,9 @@
 <?php
-echo "<br><div align = center><b>php_basics_tasks:</b> Завдання №23 </div><br>";
+# php_basics_tasks:№23
+#
+# Напишіть три рядка, використовуючи три різна функції для виводу тексту.
 
-$string = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis suscipit ducimus, dolor sint ...<br><br>";
+$string = 'Lorem ipsum dolor sit amet consectetur adipisicing ...' . "\n";
 echo $string;
 print $string;
 printf($string);

@@ -1,4 +1,6 @@
 <?php
-echo "<br><div align = center><b>php_basics_tasks:</b> Завдання №21 </div><br>";
+# php_basics_tasks: Завдання №21
+#
+# Приведіть число 0 к типу boolean. Поясніть результат.
 
 echo (bool)0;

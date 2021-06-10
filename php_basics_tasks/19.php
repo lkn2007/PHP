@@ -1,7 +1,8 @@
 <?php
-echo "<br><div align = center><b>php_basics_tasks:</b> Завдання №19 </div><br>";
+# php_basics_tasks: Завдання №19
+#
+# Виведіть результат порівняння $a і $b  із п.17 за допомогою var_dump.
 
 $a = '78';
 $b = 78;
-echo "Змінна а = '" . $a . "', змінна b = " . $b . "<br><br>";
-echo var_dump($a, $b);
+echo var_dump($a == $b);

@@ -1,7 +1,9 @@
 <?php
-echo "<br><div align = center><b>php_basics_tasks:</b> Завдання №14 </div><br>";
+# php_basics_tasks: Завдання №14
+#
+# Задана зміна $foo = 'bar'; Створити зміну bar, в якій буде зберігатися число 10.
+# Вивести число 10, використовуючи тільки зміну $foo.
 
 $foo = 'bar';
 $bar = 10;
-$foo = $bar;
-echo $foo;
+echo $$foo;

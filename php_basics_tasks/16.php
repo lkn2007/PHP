@@ -1,13 +1,9 @@
 <?php
-echo "<br><div align = center><b>php_basics_tasks:</b> Завдання №16 </div><br>";
+# php_basics_tasks: Завдання №16
+#
+# Створіть дві зміні $a і $b, значення яких будуть числами.
+# Виведіть максимальне число із них двох.
 
 $a = 0;
 $b = 0;
-echo "a = " . $a . " , b = " . $b . "<br><br>";
-if ($a > $b) {
-    echo "Найбільше число a.";
-} else if ($b > $a) {
-    echo "Найбільше число b.";
-} else if ($a == $b) {
-    echo "Числа а і b рівні.";
-}
+echo ($a > $b) ? $a : $b;

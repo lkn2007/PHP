@@ -1,21 +1,35 @@
 <?php
-echo "<br><div align = center><b>php_basics_tasks:</b> Завдання №15 </div><br>";
+# php_basics_tasks: Завдання №15
+#
+# Написати калькулятор. Зміна $a = змінне число. Зміна $b = змінне число.
+# Зміна $oprator = "+" або "-" або "/" або "*" або "%" (залишок від ділення).
+# На єкран виводити результат в залежності від значень цих зміних. 
+# Не забудьте про ділення на 0, якщо потрібно - видавати помилку що на 0 ділити неможна.
 
-$a = -10;
-$b = 11;
-$operator = "/";
-if ($operator == "+") {
-    echo "a = " . $a . " , b = " . $b . "<br><br> a + b = " . $a + $b;
-} else if ($operator == "-") {
-    echo "a = " . $a . " , b = " . $b . "<br><br> a - b = " . $a - $b;
-} else if ($operator == "*") {
-    echo "a = " . $a . " , b = " . $b . "<br><br> a * b = " . $a * $b;
-} else if ($operator == "/") {
+$a = 0;
+$b = 0;
+$operator = '/';
+if ($operator == '+') {
+    echo 'a = ' . $a . ' , b = ' . $b . "\n";
+    echo  'a + b = ' . $a + $b;
+}
+if ($operator == '-') {
+    echo 'a = ' . $a . ' , b = ' . $b . "\n";
+    echo  'a - b = ' . $a - $b;
+}
+if ($operator == '*') {
+    echo 'a = ' . $a . ' , b = ' . $b . "\n";
+    echo  'a * b = ' . $a * $b;
+}
+if ($operator == '/') {
     if ($b == 0) {
-        echo "На нуль ділити неможна ";
+        echo 'На нуль ділити неможна !';
     } else {
-        echo "a = " . $a . " , b = " . $b . "<br><br> a / b = " . $a / $b;
+        echo 'a = ' . $a . ' , b = ' . $b . "\n";
+        echo  'a / b = ' . $a / $b;
     }
-} else if ($operator == "%") {
-    echo "a = " . $a . " , b = " . $b . "<br><br> a % b = " . $a % $b;
+}
+if ($operator == '%') {
+    echo 'a = ' . $a . ' , b = ' . $b . "\n";
+    echo  'a % b = ' . $a % $b;
 }

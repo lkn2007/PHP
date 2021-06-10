@@ -1,5 +1,7 @@
 <?php
-echo "<br><div align = center><b>php_basics_tasks:</b> Завдання №3 </div><br>";
+# php_basics_tasks: Завдання №3
+#
+# Віведіть за допомогою echo фразу "Мене звати: %ваше_ім'я%."
 
-$name = "Олександр";
-echo "Мене звати : " . $name;
+$name = 'Олександр';
+echo 'Мене звати: ' . $name;

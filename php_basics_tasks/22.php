@@ -1,4 +1,6 @@
 <?php
-echo "<br><div align = center><b>php_basics_tasks:</b> Завдання №22 </div><br>";
+# php_basics_tasks: Завдання №22
+#
+# Приведіть число -20 к типу boolean. Поясніть результат.
 
 echo (bool)-20;

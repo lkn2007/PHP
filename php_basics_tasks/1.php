@@ -1,5 +1,6 @@
 <?php
-echo "<br><div align = center><b>php_basics_tasks:</b> Завдання №1 </div><br>";
+# php_basics_tasks: Завдання №1 
+#
+# Створіть зміну name і присвойте їй значення яке містить ваше і'мя.
 
-$name = "Олександр";
-echo "\$name = " . "\"" . $name . "\"";
+$name = 'Олександр';

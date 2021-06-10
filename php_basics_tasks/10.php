@@ -1,23 +1,11 @@
 <?php
-echo "<br><div align = center><b>php_basics_tasks:</b> Завдання №10 </div><br>";
+# php_basics_tasks: №10
+#
+# За допомогою конструкції switch виведіть фразу: "Це вихідний день", якщо значення
+# зміної day попадає в діапазон чисел від 1 до 5 (включно).
 
 $day = 0;
-$sign = ". Це робочий день";
-echo "\$day = " . $day;
 switch ($day) {
-    case 1:
-        echo $sign;
-        break;
-    case 2:
-        echo $sign;
-        break;
-    case 3:
-        echo $sign;
-        break;
-    case 4:
-        echo $sign;
-        break;
-    case 5:
-        echo $sign;
-        break;
+    case ($day >= 1 && $day <= 5):
+        echo 'Це робочий день';
 }

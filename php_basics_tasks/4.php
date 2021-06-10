@@ -1,5 +1,7 @@
 <?php
-echo "<br><div align = center><b>php_basics_tasks:</b> Завдання №4 </div><br>";
+# php_basics_tasks: Завдання №4
+#
+# Віведіть за допомогою echo фразу "Мені %ваш_вік% років."
 
 $age = 40;
-echo "Мені " . $age . " років.";
+echo 'Мені ' . $age . ' років';
