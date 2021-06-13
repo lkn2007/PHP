@@ -15,9 +15,5 @@ $arr = [
 ];
 
 foreach ($arr as $value) {
-    if ($value === 'Субота' || $value === 'Неділя') {
-        echo "<b>" . $value . "</b><br>\n";
-    } else {
-        echo $value . "<br>\n";
-    }
+    echo ($value === 'Субота' || $value === 'Неділя') ? "<b>" . $value . "</b><br>\n" : $value . "<br>\n";
 }

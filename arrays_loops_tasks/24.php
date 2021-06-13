@@ -11,8 +11,6 @@ $numeral  = 5;
 $counter = 0;
 $arr = str_split($number, 1);
 foreach ($arr as $value) {
-    if ($value == $numeral) {
-        $counter++;
-    }
+    !((int)$value === $numeral) ?: $counter++;
 }
 echo $counter;

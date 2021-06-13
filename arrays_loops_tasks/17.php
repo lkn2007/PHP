@@ -22,9 +22,5 @@ $arr = [
 
 $month = 'Вересень';
 foreach ($arr as $value) {
-    if (!($value === $month)) {
-        echo $value . "<br>\n";
-    } else {
-        echo "<b>" . $value . "</b><br>\n";
-    }
+    echo (!($value === $month)) ? $value . "<br>\n" : "<b>" . $value . "</b><br>\n";
 }

@@ -6,17 +6,8 @@
 # єкран 'Є!', інакше  виведіть 'Немає!'.
 
 $arr = [4, 2, 5, 19, 13, 0, 10];
-$e = [2, 3, 4];
-$flag = false;
-foreach ($e as $val) {
-    foreach ($arr as $value) {
-        if ($value === $val) {
-            $flag = true;
-            break;
-        }
-    }
-    if ($flag) {
-        break;
-    }
+
+foreach ($arr as $value) {
+    echo ($value === 2 || $value === 3 || $value === 4) ? 'Є!' : 'Не має!';
+    break;
 }
-echo ($flag) ? 'Є!' : 'Не має!';

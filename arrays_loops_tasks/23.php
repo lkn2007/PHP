@@ -11,8 +11,4 @@ if (!is_integer($input)) {
     exit;
 }
 $arr = str_split($input, 1);
-$sum = 0;
-foreach ($arr as $value) {
-    $sum += $value;
-}
-echo $sum;
+echo array_sum($arr);
