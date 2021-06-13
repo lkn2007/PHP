@@ -5,7 +5,7 @@
 # За допомогою цикла foreach найдіть суму єлементів цього масиву.
 # Запишіть її в зміну $result.
 
-$array = array(1, 20, 15, 17, 24, 35);
+$array = [1, 20, 15, 17, 24, 35];
 $result = 0;
 foreach ($array as $value) {
     $result += $value;

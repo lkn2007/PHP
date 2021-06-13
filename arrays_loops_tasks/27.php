@@ -6,11 +6,11 @@
 # Є список кольорів, в масиві: $colors = array('red', 'yellow', 'blue', 'gray', 'marron', 'brown', 'green').
 # Необхідно створити скрипт, який по заданим умовам виведе таблицю розміру $row на $cols,
 # в якій всі комірки будуть мати кольори, вибрані випадковим чином із масиву $colors.
-# В кожній комірці повину знаходитися випадкове число.
+# В кожній комірці повино знаходитися випадкове число.
 
 $row = 10;
 $cols = 10;
-$colors = array('red', 'yellow', 'blue', 'gray', 'marron', 'brown', 'green');
+$colors = ['red', 'yellow', 'blue', 'gray', 'marron', 'brown', 'green'];
 
 echo "<table align = \"center\" border=\"0\">\n";
 for ($j = 1; $j <= $row; $j++) {

@@ -7,13 +7,13 @@
 # $en = array('green', 'red', 'blue');
 # $ua = array('зелений', 'червоний', 'синій');
 
-$arr = array(
+$arr = [
     'green' => 'зелений',
     'red' => 'червоний',
     'blue' => 'синій',
-);
-$en = array();
-$ua = array();
+];
+$en = [];
+$ua = [];
 
 foreach ($arr as $key => $value) {
     $en[] = $key;
