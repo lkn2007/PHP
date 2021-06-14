@@ -7,7 +7,7 @@
 declare(strict_types=1);
 
 $input = '123';
-if (!is_string($input)) {
+if (!is_numeric($input)) {
     echo 'Введено не коректні дані !';
     exit;
 }
