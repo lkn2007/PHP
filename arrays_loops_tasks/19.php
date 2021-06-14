@@ -17,5 +17,5 @@ $arr = [
 
 $day = 'Середа';
 foreach ($arr as $value) {
-    echo (!($value === $day)) ? $value . "<br>\n" : "<i>" . $value . "</i><br>\n";
+    echo ($value !== $day) ? $value . "<br>\n" : "<i>" . $value . "</i><br>\n";
 }

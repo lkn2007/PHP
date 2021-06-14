@@ -6,8 +6,10 @@
 # єкран 'Є!', інакше  виведіть 'Немає!'.
 
 $arr = [4, 2, 5, 19, 13, 0, 10];
-
+$message = false;
 foreach ($arr as $value) {
-    echo ($value === 2 || $value === 3 || $value === 4) ? 'Є!' : 'Не має!';
-    break;
+    if ($value === 2 || $value === 3 || $value === 4) {
+        $message = true;
+    }
 }
+echo ($message) ? 'Є!' : 'Не має!';
