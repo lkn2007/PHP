@@ -10,6 +10,7 @@ if (empty($_POST['text'])) {
 $file = "post.txt";
 $date = date('(d.m.Y H:i:s)');
 $dictionary = "dictionary.txt";
+$post_data = [];
 
 $tmp = trim(strtok($post, " "));
 while ($tmp) {

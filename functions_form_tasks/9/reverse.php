@@ -1,17 +1,18 @@
 <?php
 
-$post = htmlspecialchars($_POST['text']);
+$post = trim(htmlspecialchars($_POST['text']));
+
 if (empty($_POST['text'])) {
     Header("Location: index.php");
     exit();
 }
 
-function reverse(string $str)
+function reverse(string $string): string
 {
+    $arr = mb_str_split($string);
     $res = '';
-    $len =  -mb_strlen($str);
-    for ($i = -1; $i >= $len; --$i) {
-        $res .= mb_substr($str, $i, 1);
+    foreach ($arr as $value) {
+        $res = $value . $res;
     }
     return $res;
 }

@@ -8,7 +8,7 @@ function getFile(string $path, string $template)
 {
     $all = scandir($path);
     foreach ($all as $value) {
-        if (!is_dir($path . $value) && strpos($value, $template)) {
+        if (!is_dir($path . $value) && strpos(' ' . $value, $template)) {
             echo $value . "\n";
         }
     }

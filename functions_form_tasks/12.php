@@ -8,13 +8,14 @@
 # Рядок, повернутий функціею: 'А там хоть трава не расти. А ларчик просто открывался. А король-то — голый. 
 # А вы друзья как ни садитесь, все в музыканты не годитесь. А воз и ныне там. А Васька слушает да ест.'.
 
-function reverse(string $str)
+function reverse(string $str): string
 {
     $res = '';
-    $arr = array_filter(explode('.', trim($str)));
-    $tmp = array_reverse($arr);
-    foreach ($tmp as $value) {
-        $res .= trim($value) . ". ";
+    $arr = explode('.', trim($str));
+    foreach ($arr as $value) {
+        if (!empty($value)) {
+            $res = trim($value) . '. ' . $res;
+        }
     }
-    echo $res;
+    return $res;
 }

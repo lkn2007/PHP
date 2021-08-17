@@ -9,17 +9,14 @@
 # Рядок, повернутий функціею: 'А Васька слушает да ест. А воз и ныне там. А вы друзья как ни садитесь, все в музыканты 
 # не годитесь. А король-то — голый. А ларчик просто открывался. А там хоть трава не расти.'.
 
-function aper(string $str)
+function upper(string $str): string
 {
-    $arr_str = array_filter(explode('.', $str));
+    $arr_str = explode('.', $str);
     $res = '';
     foreach ($arr_str as $value) {
-        $tmp = explode(' ', trim($value));
-        foreach ($tmp as $key => $value) {
-            $tmp[$key] = mb_strtoupper($value);
-            break;
+        if (!empty($value)) {
+            $res .= mb_strtoupper((mb_substr(trim($value), 0, 1))) . mb_substr(trim($value), 1) . '. ';
         }
-        $res .= implode(' ', $tmp) . ". ";
     }
-    echo $res;
+    return $res;
 }

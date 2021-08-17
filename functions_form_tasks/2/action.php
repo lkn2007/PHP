@@ -1,31 +1,26 @@
 <?php
 
-function handlerTextarea(string $name)
+function handlerTextarea(string $name): array
 {
-    $word = trim(strtok($_POST[$name], " \n"));
-    $arr_word = [];
-    while ($word) {
-        $arr_word[] = trim($word);
-        $word = strtok(" \n");
+    if (empty($_POST[$name])) {
+        Header("Location: form.html");
+        exit();
     }
-    return $arr_word;
+    return explode(' ', trim(htmlspecialchars($_POST[$name])));
 }
 
-function myCompare(string $a, string $b)
+function myCompare(string $a, string $b): int
 {
-    if (strlen($a) == strlen($b)) {
-        return 0;
-    }
-    return (strlen($a) > strlen($b)) ? 1 : -1;
+    return (strlen(trim($a)) - strlen(trim($b)));
 }
 
-function getTopLongWords(array $words)
+function getTopLongWords(array $words): array
 {
     usort($words, 'myCompare');
     return array_slice($words, -3);
 }
 
-function printTopLongWords(array $input)
+function printTopLongWords(array $input): void
 {
     echo '<b>ТОП 3 найдовших слів:</b><br><br>';
     foreach ($input as $value) {
@@ -33,6 +28,5 @@ function printTopLongWords(array $input)
     }
 }
 
-$temp = handlerTextarea('textarea');
-$result = getTopLongWords($temp);
+$result = getTopLongWords(handlerTextarea('textarea'));
 printTopLongWords($result);

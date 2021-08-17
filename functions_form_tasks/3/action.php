@@ -1,21 +1,25 @@
 <?php
 
-function handlerInput(string $name)
+function handlerInput(string $name): string
 {
-    $value = ($_POST[$name]);
-    if (!is_numeric($value) || $value < 0 || !filter_var($value, FILTER_VALIDATE_INT)) {
+    if (empty($_POST[$name])) {
+        Header("Location: form.html");
+        exit();
+    }
+    $value = trim(htmlspecialchars(($_POST[$name])));
+    if (!is_numeric($value) || +$value <= 0 || !is_int(+$value)) {
         echo 'Введіть ціле число більше нуля';
-        exit;
+        exit();
     }
     return $value;
 }
 
-function handlerFile(int $parameter)
+function handlerFile(int $parameter): void
 {
     $filename = 'file.txt';
     if (!file_exists($filename)) {
         echo 'Помилка відкриття файлу';
-        exit;
+        exit();
     }
     $arr_file = file($filename);
     $arr_word = [];
@@ -23,12 +27,12 @@ function handlerFile(int $parameter)
         $tmp = '';
         $word = strtok($value, " \n");
         while ($word) {
-            if (iconv_strlen($word) <= $parameter) {
+            if (mb_strlen($word) <= $parameter) {
                 $tmp .= $word . ' ';
             }
             $word = strtok(" \n");
         }
-        if (strlen($tmp) != 0) {
+        if (mb_strlen($tmp) != 0) {
             $arr_word[] = trim($tmp);
         }
     }
@@ -40,5 +44,4 @@ function handlerFile(int $parameter)
     fclose($handler);
 }
 
-$parameter = handlerInput("input");
-handlerFile($parameter);
+handlerFile(handlerInput("input"));
